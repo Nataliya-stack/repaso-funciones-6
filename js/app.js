@@ -1,3 +1,8 @@
+const inputEl = document.getElementById("inputTexto");
+const inputPalabra  = document.getElementById("inputPalabra");
+const btnEl = document.getElementById("btnCalcular");
+const resultEl = document.getElementById("resultadoTexto");
+
 const contarPalabrasRepetidas = (textoLargo, palabraBuscar) => {
     const textoLimpio = textoLargo.toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()?¿¡!]/g, "");
     const palabraBuscarLimpia = palabraBuscar.toLowerCase();
@@ -5,11 +10,6 @@ const contarPalabrasRepetidas = (textoLargo, palabraBuscar) => {
     const coincidencias = listaPalabras.filter(palabra => palabra === palabraBuscarLimpia);    
     return coincidencias.length;
 };
-
-const inputEl = document.getElementById("inputTexto");
-const inputPalabra  = document.getElementById("inputPalabra");
-const btnEl = document.getElementById("btnCalcular");
-const resultEl = document.getElementById("resultadoTexto");
 
 btnEl.addEventListener("click", () => {
     const texto = inputEl.value.trim();
